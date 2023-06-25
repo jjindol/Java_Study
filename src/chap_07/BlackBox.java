@@ -5,8 +5,26 @@ public class BlackBox { // 설계도
     String resolution;
     int price;
     String color;
+    int serialNumber;
+    static int counter = 0; // 시리얼 번호를 생성해주는 역할(0 > ++ 연산을 통해 값 증가)
 
     static boolean canAutoReport = false; // 자동 신고 기능, 클래스 변수(클래스 내부에 선언됨)
+
+    BlackBox() {
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++counter;
+        System.out.println("새로운 시리얼 넘버 발급: " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color) {
+        this(); // 기본 생성자의 역할을 수행!
+
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
 
     void autoReport() { // 전달값, 반환값 x
         if(canAutoReport) {
@@ -28,6 +46,34 @@ public class BlackBox { // 설계도
             return 1;
         }
         return 10;
+    }
+
+    // showDateTime: 날짜정보 표시여부
+    // showSpeed: 속도정보 표시여부
+    // min: 영상 기록 단위(분)
+    void record(boolean showDateTime, boolean showSpeed, int min) {
+        System.out.println("녹화를 시작합니다.");
+        if (showDateTime) {
+            System.out.println("영상에 날짜정보가 표시됩니다.");
+        }
+        if (showSpeed) {
+            System.out.println("영상에 속도정보가 표시됩니다.");
+        }
+        System.out.println("영상은 " + min + "분 단위로 기록됩니다.");
+    }
+
+    void record() {
+        record(true, true, 5);
+    }
+
+    static void callServiceCenter() {
+        System.out.println("서비스 센터(1588-0000) 로 연결합니다.");
+        canAutoReport = false; // static으로 선언한 변수는 static 메소드에서 사용 가능
+        // 인스턴스 변수는 객체가 생성된 후 만들어지기 때문에 static 클래스 내에서 직접 접근x
+    }
+
+    void appendModelName(String modelName) {
+        this.modelName += modelName; // 클래스의 인스턴스 변수에 직접 접근
     }
 }
 
