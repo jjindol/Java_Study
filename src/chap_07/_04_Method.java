@@ -13,9 +13,7 @@ public class _04_Method {
 
         // 일반 영상: 1(type)
         // 충돌 감지 영상: 2
-
         System.out.println("일반 영상 파일 수: " + b1.getVideoFileCount(1));
         System.out.println("출동 감지 영상 파일 수: " + b1.getVideoFileCount(2));
-
     }
 }

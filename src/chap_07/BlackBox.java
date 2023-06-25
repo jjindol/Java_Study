@@ -29,6 +29,5 @@ public class BlackBox { // 설계도
         }
         return 10;
     }
-
 }
 
