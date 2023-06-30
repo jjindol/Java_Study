@@ -1,6 +1,8 @@
 package chap_09;
 
 import chap_09.coffee.*;
+import chap_09.user.User;
+import chap_09.user.VIPUser;
 
 public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져올 때 형 변환x
     public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져�
         CoffeeByName c3 = new CoffeeByName(34);
         c3.ready();
 
-        CoffeeByName c4 = new CoffeeByName("십진수");
+        CoffeeByName c4 = new CoffeeByName("삼진수");
         c4.ready();
 
         System.out.println("---------------------");
@@ -34,9 +36,16 @@ public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져�
         int c5Name = c5.name; // 형변환 필요 없음.
         System.out.println("주문 고객 번호: " + c5Name);
 
-        Coffee<String> c6 = new Coffee<>("오진수");
+        Coffee<String> c6 = new Coffee<>("사진수");
         c6.ready();
         String c6Name = c6.name;
         System.out.println("주문 고객 이름: " + c6Name);
+
+        System.out.println("---------------------");
+        CoffeeByUser<User> c7 = new CoffeeByUser<>(new User("오진수"));
+        c7.ready();
+
+        CoffeeByUser<User> c8 = new CoffeeByUser<>(new VIPUser("육진수"));
+        c8.ready();
     }
 }
