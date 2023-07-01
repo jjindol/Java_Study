@@ -1,6 +1,7 @@
 package chap_09;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class _04_ArrayList {
     public static void main(String[] args) {
@@ -42,6 +43,30 @@ public class _04_ArrayList {
         for (int i = 0; i < list.size(); i++) {
             String s = list.get(i);
             System.out.println(s);
+        }
+        System.out.println("----------------");
+
+        // 변경
+        System.out.println("수강권 양도 전: " + list.get(0));
+        list.set(0, "student6");
+        System.out.println("수강권 양도 후: " + list.get(0));
+        System.out.println("----------------");
+
+        // 확인
+        System.out.println(list.indexOf("student2"));
+        // 선착순 5명 내에 포함되어 있는가?
+        if (list.contains("student2")) {
+            System.out.println("수강신청 성공");
+        } else {
+            System.out.println("수강신청 실패");
+        }
+        System.out.println("----------------");
+
+        // 전체 삭제
+        list.clear();
+        if (list.isEmpty()==true) {
+            System.out.println("학생 수: " + list.size());
+            System.out.println("리스트 삭제가 완료되었습니다.");
         }
     }
 }
