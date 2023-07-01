@@ -26,5 +26,7 @@ public class _05_LinkedList {
         System.out.println("추가 전: " + list.get(1));
         list.add(1, "teacher");
         System.out.println("추가 후: " + list.get(1));
+
+        // 삭제
     }
 }
