@@ -2,7 +2,7 @@ package chap_09;
 
 import chap_09.coffee.*;
 import chap_09.user.User;
-import chap_09.user.VIPUser;
+import chap_09.user.VipUser;
 
 public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져올 때 형 변환x
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져�
         CoffeeByUser<User> c7 = new CoffeeByUser<>(new User("오진수"));
         c7.ready();
 
-        CoffeeByUser<User> c8 = new CoffeeByUser<>(new VIPUser("육진수"));
+        CoffeeByUser<User> c8 = new CoffeeByUser<>(new VipUser("육진수"));
         c8.ready();
     }
 }

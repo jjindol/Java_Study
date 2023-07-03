@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class _07_HashMap {
     public static void main(String[] args) {
         // 맵 (Key, Value)
-        HashMap<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>(); // LinkedHashMap
 
         // 데이터 추가
         map.put("student1", 10);
