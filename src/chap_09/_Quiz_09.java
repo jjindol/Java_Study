@@ -1,7 +1,6 @@
-package chap_09.user;
+package chap_09;
 
 import java.util.ArrayList;
-import java.util.List;
 
 class Student {
     String name;
@@ -33,5 +32,3 @@ public class _Quiz_09 {
         }
     }
 }
-// '==' 연산자는 변수가 같은 객체를 참조하는지 확인
-// equals() 메소드는 객체의 내용을 비교
