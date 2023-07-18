@@ -15,7 +15,7 @@ class MyFileWriter implements AutoCloseable {
 }
 
 
-public class TryWithResources {
+public class _05_TryWithResources {
     public static void main(String[] args) {
         MyFileWriter writer1 = null;
         try {
