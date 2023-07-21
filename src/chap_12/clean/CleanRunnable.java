@@ -9,5 +9,4 @@ public class CleanRunnable implements Runnable{
         }
         System.out.println("(직원) 청소 끝");
     }
-
 }
