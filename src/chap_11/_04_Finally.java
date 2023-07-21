@@ -17,10 +17,7 @@ public class _04_Finally {
         } finally {
             System.out.println("프로그램 정상 종료");
         }
-
-
     }
-
 }
 // try + catch
 // try + catch + finally
