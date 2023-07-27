@@ -15,7 +15,7 @@ public class _01_Thread {
         for (int i = 1; i <=10 ; i++) {
             System.out.println("(혼자) " + i + "번방 청소 중");
         }
-        System.out.println("(혼자) 청소 끝");
+        System.out.println("-- 혼자 청소 끝 --");
     }
 
     public static void cleanByBoss() {
@@ -23,6 +23,6 @@ public class _01_Thread {
         for (int i = 1; i <=10 ; i+=2) {
             System.out.println("(사장) " + i + "번방 청소 중");
         }
-        System.out.println("(사장) 청소 끝");
+        System.out.println("-- 사장 청소 끝 --");
     }
 }
