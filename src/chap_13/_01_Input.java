@@ -28,6 +28,7 @@ public class _01_Input {
 //
 //        System.out.println("------------------");
 
+
         System.out.print("무슨 프로그래밍 언어를 배웠나요: ");
         String lang = sc.nextLine();
         System.out.println("언어: " +lang);
