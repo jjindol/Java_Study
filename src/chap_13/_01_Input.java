@@ -3,8 +3,7 @@ package chap_13;
 import java.util.Scanner;
 
 public class _01_Input {
-    public static void main(String[] args) {
-        // 사용자 입력
+    public static void main(String[] args) { // 사용자 입력
         Scanner sc = new Scanner(System.in);
         System.out.print("이름을 입력하세요: ");
         String name = sc.next(); // 값을 받아 String 형태로 반환
