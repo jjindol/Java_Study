@@ -8,20 +8,18 @@ public class _01_Generics {
         String[] sArray = {"A", "B", "C", "D", "E"};
 
         printIntArray(iArray);
-        printStringArray(sArray);
         printDoubleArray(dArray);
+        printStringArray(sArray);
 
         System.out.println("----------------------");
 
         printAnyArray(iArray); // 기본 자료형은 제네릭스 타입으로 바로 사용x
+        printAnyArray(dArray); // 기본 자료형
         printAnyArray(sArray); // 참조 자료형은 가능
-        printAnyArray(dArray);
-        // 제네릭스를 이용하면 하나의 메소드만 사용하면 된다.
-
-    }
+    } // 제네릭을 이용하면 하나의 메소드만 사용하면 된다.
 
 
-    // T: Type, K: Key, E: Element
+    // T: Type, K: Key, E: Element, V : Value
     private static <T> void printAnyArray(T[] array) {
         for (T t : array) {
             System.out.print(t + " ");
@@ -30,10 +28,9 @@ public class _01_Generics {
     }
 
 
-
-    private static void printStringArray(String[] sArray) {
-        for (String i : sArray) {
-            System.out.print(i + " ");
+    public static void printIntArray(Integer[] iArray) {
+        for (int i : iArray) {
+            System.out.print(i + " "); // 1, 2, 3, 4, 5
         }
         System.out.println();
     }
@@ -43,15 +40,12 @@ public class _01_Generics {
             System.out.print(i + " ");
         }
         System.out.println();
-        
     }
 
-    public static void printIntArray(Integer[] iArray) {
-        for (int i : iArray) {
-            System.out.print(i + " "); // 1, 2, 3, 4, 5
+    private static void printStringArray(String[] sArray) {
+        for (String i : sArray) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
-
-
 }

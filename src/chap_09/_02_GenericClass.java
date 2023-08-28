@@ -31,9 +31,11 @@ public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져�
         // c4Name = (String) c3.name; // Integer cannot be cast to class java.lang.String
         System.out.println("---------------------");
 
+
+
         Coffee<Integer> c5 = new Coffee<>(35);
         c5.ready();
-        int c5Name = c5.name; // 형변환 필요 없음.
+        int c5Name = c5.name; // 형변환 필요 없음!
         System.out.println("주문 고객 번호: " + c5Name);
 
         Coffee<String> c6 = new Coffee<>("사진수");
