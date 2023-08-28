@@ -28,7 +28,8 @@ public class _02_GenericClass { // 코드의 중복을 없애고 값을 가져�
         String c4Name = (String)(c4.name);
         System.out.println("주문 고객 이름: " + c4Name);
 
-        // c4Name = (String) c3.name; // Integer cannot be cast to class java.lang.String
+        // c4Name = (String) c3.name;
+        // Integer cannot be cast to class java.lang.String
         System.out.println("---------------------");
 
 
