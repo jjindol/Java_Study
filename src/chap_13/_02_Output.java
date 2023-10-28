@@ -40,8 +40,6 @@ public class _02_Output {
         System.out.printf("%-6s %4d %4d %6.1f%n", "학생3", 95, 100, 97.5);
 
     }
-}
-
 
 // %d: decimal integer: 10진 정수 형식
 // %f: floating-point: 부동 소수점 형식
